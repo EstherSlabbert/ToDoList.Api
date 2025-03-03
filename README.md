@@ -1,8 +1,8 @@
-# Superhero API Web App
+# ToDoList API Web App
 
-ASP.NET Web API SuperHero App using SqlServer database.
+ASP.NET Web API ToDoList App using SqlServer database.
 
-This app enables you to track basic information about superheroes in a Sql Server database and manages this via an API that makes use of controllers and manages data via EntityFrameworkCore (the recommended Object-Relational Mapper (ORM) for .NET).
+This app enables you to track basic information about projects with associated todos in a Sql Server database and manages this via an API that makes use of controllers and manages data via EntityFrameworkCore (the recommended Object-Relational Mapper (ORM) for .NET).
 
 ## Initial set up and discovery
 
@@ -28,9 +28,9 @@ This app enables you to track basic information about superheroes in a Sql Serve
    - Microsoft.EntityFrameworkCore.SqlServer (Version 8.0.0)
    - Microsoft.EntityFrameworkCore.Tools (Version 8.0.0)
 
-3. Set up a new entity (in this project, a class called `SuperHero`) with the necessary properties.
+3. Set up a new entity (in this project, a class called `Project` and `ToDo`) with the necessary properties.
 4. Add a new controller for getting all the superheroes with dummy data to return from the controller itself as a placeholder for now.
-5. Set up your `DataContext` file, which creates a class that inherits from `DbContext` and add your context options to the constructor and a new table in the form of `DbSet<SuperHero>`.
+5. Set up your `DataContext` file, which creates a class that inherits from `DbContext` and add your context options to the constructor and a new table in the form of `DbSet<Project>` and `DbSet<ToDo>`.
 6. Set your connection strings in the `appsettings.json` file.
 7. Update `Program.cs` file with the database context like follows:
 
@@ -52,4 +52,4 @@ This app enables you to track basic information about superheroes in a Sql Serve
 9. Now set up the controller to use the database with the DataContext as an entry point. Get the controller working as desired then add other controllers for CRUD operations.
 10. Clean up unneeded files.
 11. Separate out files and methods into projects as dependency injections and services to be used etc.
-12. Add tests if you want.
+12. Add tests.
